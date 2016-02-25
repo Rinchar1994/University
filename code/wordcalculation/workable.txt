@@ -1,0 +1,44 @@
+void  main()
+{
+	int num1, num2, num3;
+	char msg;
+	float sum;
+	bool quit = false;
+	while(1)
+	{
+		cin >> msg;
+		if(msg == 'q')
+		{
+			quit = true;
+			break;
+		}
+	    cin >> num1 >> num2 >> num3;
+		switch(msg)
+		{
+		        case '1':
+				sum = num1 + num2 +num3;
+				if(sum<num1)
+					sum = num1;
+				break;
+			case '2':
+				sum = num1 - num2 - num3;
+				if(num1>sum)
+					sum = num1;
+				break;
+			case '3':
+				sum = num1 * num2 * num3;
+				sum--;
+				break;
+			case '4':
+				sum = num1 / num2;
+				sum++;
+				break;
+			default:
+				break;
+		}
+		cout << sum << endl;
+	}
+}
+
+	
+	
