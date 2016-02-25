@@ -1,0 +1,250 @@
+//1252366 蒋凌超 电子一班
+
+#include <iostream>
+#include <ctime>
+#include <cmath>
+#include <windows.h>
+using namespace std;
+
+void move(HANDLE hout, const int X, const int Y)
+{
+	COORD coord;
+	coord.X = X;
+	coord.Y = Y;
+	SetConsoleCursorPosition(hout,coord);	
+}
+
+void setcolor(HANDLE hout, const int bg_color, const int fg_color)
+{
+	SetConsoleTextAttribute(hout, bg_color*16+fg_color);
+}
+
+void showstr(HANDLE hout, const int X, const int Y, const int bg_color, const int fg_color, const char *str)
+{
+	const char *p;
+	move(hout, X, Y);
+	setcolor(hout, bg_color, fg_color);
+	for (p=str; *p; p++)
+		putchar(*p);
+}
+
+void showch(HANDLE hout, const int X, const int Y, const int bg_color, const int fg_color, const char ch)
+{
+	move(hout, X, Y);
+	setcolor(hout, bg_color, fg_color);
+	putchar(ch);
+}
+
+void to_be_continued(HANDLE hout, char *prompt)
+{
+	setcolor(hout, 0, 7);
+	move(hout, 0, 22);
+	cout << prompt << endl << "显示完成，按回车键继续...";
+	getchar();
+	system("cls");
+}
+
+int main()
+{
+	HANDLE hout = GetStdHandle(STD_OUTPUT_HANDLE);
+	if (1)
+	{
+		int x, y, angle;
+		const double PI = 3.14159;
+		int CENTER_X = 25, CENTER_Y = 8, R=0;
+		int bg_color = 0, fg_color = 15;
+		for (y=20; y>7; y--)
+		{
+			showstr(hout, 25, y, 0, 6, "*");
+			Sleep(100);
+			if (y>8)
+				showstr(hout, 25, y, 0, 7, " ");
+		}
+		while(R<=9)
+		{
+			for (angle=0; angle<360; angle+=15)
+			{
+				x = CENTER_X + 2*(R*cos(PI*angle/180)+0.5);
+				y = CENTER_Y +   (R*sin(PI*angle/180)+0.5);
+				showch(hout, x, y, bg_color, fg_color, '*');
+			}
+
+			Sleep(500);
+
+			R++;
+			fg_color = rand()%16;
+		}
+		Sleep(1000);
+		R=0;
+		showch(hout, CENTER_X, CENTER_Y, bg_color, 0, ' ');
+		while(R<=9)
+		{
+			for (angle=0; angle<360; angle+=15)
+			{
+				x = CENTER_X + 2*(R*cos(PI*angle/180)+0.5);
+				y = CENTER_Y +   (R*sin(PI*angle/180)+0.5);
+				showch(hout, x, y, bg_color, 0, ' ');
+			}
+
+			Sleep(500);
+
+			R++;
+		}
+		to_be_continued(hout, "烟花绽放,这是个美丽的日子，因为。。。");
+	}
+
+	if (1)
+	{
+		int h=2, l=1, x1=25, x2=25, y;
+
+		while (h<=12)
+		{
+			for (y=20; y>20-h; y--)
+				showstr(hout, 25, y, 1, 0, " ");
+			for (y=20-h; y>20-h-l; y--)
+			{
+				showstr(hout, x1-=3, y, 2, 0, " ");
+				showstr(hout, x2+=3, y, 2, 0, " ");
+			}
+
+			Sleep(500);
+
+			x1=x2=25;
+			if (h<12)
+			{
+				for (y=20; y>20-h; y--)
+				    showstr(hout, 25, y, 0, 0, " ");
+			    for (y=20-h; y>20-h-l; y--)
+				{
+			    	showstr(hout, x1-=3, y, 0, 0, " ");
+			    	showstr(hout, x2+=3, y, 0, 0, " ");
+				}
+			}
+
+
+			h+=2;
+			l++;
+			x1=x2=25;
+		}
+
+		const double PI = 3.14159;
+		int CENTER_X = 40, CENTER_Y = 5, R=0;
+		int bg_color = 0, fg_color = 2, angle, x;
+
+		while (R<=1)
+		{
+			for (angle=0; angle<360; angle+=15)
+			{
+		    	x = CENTER_X + 2*(R*cos(PI*angle/180)+0.5);
+		    	y = CENTER_Y +   (R*sin(PI*angle/180)+0.5);
+		    	showch(hout, x, y, bg_color, fg_color, '*');
+			}
+			
+			Sleep(500);
+
+			R++;
+			CENTER_Y++;
+			fg_color+=2;
+		}
+
+		const int MIN_X=40;
+
+		for ( CENTER_X=60; CENTER_X>MIN_X ; CENTER_X--)
+		{
+			showstr(hout, CENTER_X-4, 10, 0, 7, "    *");
+			showstr(hout, CENTER_X-4, 11, 0, 7, "  * *");
+			showstr(hout, CENTER_X-4, 12, 0, 7, " ******");
+			showstr(hout, CENTER_X-4, 13, 0, 7, "*   *");
+			showstr(hout, CENTER_X-4, 14, 0, 7, "    *");
+			showstr(hout, CENTER_X-4, 15, 0, 7, "*********");
+			showstr(hout, CENTER_X-4, 16, 0, 7, "    *");
+			showstr(hout, CENTER_X-4, 17, 0, 7, "    *");
+			showstr(hout, CENTER_X-4, 18, 0, 7, "    *");
+			showstr(hout, CENTER_X-4, 19, 0, 7, "    *");
+			showstr(hout, CENTER_X-4, 20, 0, 7, "    *");
+
+		    Sleep(100);
+
+			if ( CENTER_X>MIN_X+1)
+			{
+				showstr(hout, CENTER_X-4, 10, 0, 7, "     ");
+		    	showstr(hout, CENTER_X-4, 11, 0, 7, "     ");
+			    showstr(hout, CENTER_X-4, 12, 0, 7, "       ");
+  		    	showstr(hout, CENTER_X-4, 13, 0, 7, "         ");
+    			showstr(hout, CENTER_X-4, 14, 0, 7, "         ");
+	    		showstr(hout, CENTER_X-4, 15, 0, 7, "         ");
+		    	showstr(hout, CENTER_X-4, 16, 0, 7, "         ");
+    			showstr(hout, CENTER_X-4, 17, 0, 7, "         ");
+	    		showstr(hout, CENTER_X-4, 18, 0, 7, "         ");
+		    	showstr(hout, CENTER_X-4, 19, 0, 7, "         ");
+			    showstr(hout, CENTER_X-4, 20, 0, 7, "         ");
+			}
+		}
+
+		CENTER_X = 40, CENTER_Y = 6, R=0;
+		bg_color = 0, fg_color = 0;
+
+		while (R<=1)
+		{
+			for (angle=0; angle<360; angle+=15)
+			{
+		    	x = CENTER_X + 2*(R*cos(PI*angle/180)+0.5);
+		    	y = CENTER_Y +   (R*sin(PI*angle/180)+0.5);
+		    	showch(hout, x, y, bg_color, fg_color, ' ');
+			}
+			
+
+			R++;
+			CENTER_Y++;
+		}
+		R=1;
+		for(CENTER_Y=5; CENTER_Y<10; CENTER_Y++)
+		{
+			for (angle=0; angle<360; angle+=15)
+			{
+		    	x = CENTER_X + 2*(R*cos(PI*angle/180)+0.5);
+		    	y = CENTER_Y +   (R*sin(PI*angle/180)+0.5);
+		    	showch(hout, x, y, bg_color, 4, '*');
+			}
+
+			Sleep(500);
+			if (CENTER_Y<9)
+				for (angle=0; angle<360; angle+=15)
+				{
+		        	x = CENTER_X + 2*(R*cos(PI*angle/180)+0.5);
+		            y = CENTER_Y +   (R*sin(PI*angle/180)+0.5);
+		        	showch(hout, x, y, bg_color, fg_color, ' ');
+				}
+		}
+
+		Sleep(1000);
+		CENTER_Y--;
+
+		for (angle=0; angle<360; angle+=15)
+		{
+	    	x = CENTER_X + 2*(R*cos(PI*angle/180)+0.5);
+			y = CENTER_Y +   (R*sin(PI*angle/180)+0.5);
+		   	showch(hout, x, y, bg_color, fg_color, ' ');
+		}
+		CENTER_X=40;
+		showstr(hout, CENTER_X-5, 12, 0, 7, "      *  *");
+		showstr(hout, CENTER_X-5, 13, 0, 7, "      *    *");
+		showstr(hout, CENTER_X-5, 14, 0, 7, "      *    * *");
+		showstr(hout, CENTER_X-5, 15, 0, 7, "      *    *");
+		showstr(hout, CENTER_X-5, 16, 0, 7, "****************");
+		showstr(hout, CENTER_X-5, 17, 0, 7, "      *    *");
+		showstr(hout, CENTER_X-5, 18, 0, 7, "      *    *");
+		showstr(hout, CENTER_X-5, 19, 0, 7, "      *");
+		showstr(hout, CENTER_X-5, 20, 0, 7, "      *");
+
+		to_be_continued(hout, "嘴馋牛顿看见苹果熟了，跑到苹果树下，结果被掉下的苹果砸死了。从此，后世的我们少了很多作业（0.0）");
+	}
+
+	return 0;
+}
+		
+
+			
+
+
+		

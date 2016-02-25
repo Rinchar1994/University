@@ -1,0 +1,12 @@
+//1252366 ½¯Áè³¬ µç×ÓÒ»°à
+
+class Array_max
+{
+    public:
+		void set_value();
+        void max_value();
+        void show_value();
+	private:
+		int array[10];
+		int max;
+};
