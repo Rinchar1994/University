@@ -1,0 +1,1417 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*---------------海事外网高级搜索列表样式开始-------------------*/
+.search-lb{
+    margin-top:10px;
+    border:1px solid #dddddd;
+}
+.s-lb{
+    background:url(/resources/images_front/sou-bg.jpg) no-repeat center bottom;
+    height:32px;
+    line-height:32px;
+    padding:0 15px;
+}
+.s-lb span{
+    float:right;
+}
+.s-lb h1{
+    font-size:14px;
+    font-weight:bold;
+    color:#1253af;
+    background:url(../Images/s-lb.jpg) no-repeat left center;
+    padding-left:20px;
+}
+.s-news {
+    width:924px;
+    padding:7px 17px;
+}
+.s-news ul li{
+    line-height:30px;
+    border-bottom:1px dashed #ccc;
+    background:url(../Images/li-bg.jpg) no-repeat left center;
+    padding-left:15px;
+}
+.s-fenye{
+    text-align:center;
+    padding:15px 0;
+    color:#156dd1;
+}
+.s-fenye a{
+    color:#156dd1;
+    padding:3px 5px;
+}
+.s-fenye a:hover{
+    color:#f00;
+    font-weight:bold;
+}
+.s-fenye a.s-f-a1{
+    background:#62a1df;
+    color:#fff;
+    font-weight:bold;
+}
+/*---------------海事外网高级搜索列表样式结束-------------------*/
+
+
+
+
+
+
+
+
+/*---------------组织机构-局长致辞样式开始-------------------*/
+.jz-zc{
+    font-size:24px;
+    font-weight:bold;
+    color:#05589c;
+    text-align:center;
+    padding-bottom:10px;
+}
+.jz-wz{
+    padding:0 5px;
+    border-top:1px dashed #ccc;
+}
+.jz-wz p{
+    text-indent:24px;
+    line-height:24px;
+    font-size:14px;
+    padding-top:15px;
+}
+/*---------------组织机构-局长致辞样式结束-------------------*/
+
+
+
+/*---------------组织机构-机构职能样式结束-------------------*/
+.jg-zn{
+    color:#666;
+    line-height:24px;
+}
+.jg-zn p.jg-sp{
+    text-indent:0;
+    width:283px;
+    height:196px;
+    overflow:hidden;
+    float:left;
+}
+.jg-zn p{
+    padding-bottom:10px;
+    text-indent:24px;
+}
+.jg-w1{
+    width:400px;
+    font-size:12px;
+    padding-left:15px;
+    float:left;
+}
+.jg-gl{
+    height:34px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    background:#fcfbfb;
+    line-height:34px;
+    font-size:12px;
+    padding-left:10px;
+    margin-top:15px;
+}
+.jg-gl h1{
+    font-weight:bold;
+    color:#333;
+    background:url(../Images/zn-bg.jpg) no-repeat left center;
+    padding-left:20px;
+}
+.jg-w2{
+    line-height:24px;
+    color:#666;
+    margin-top:10px;
+}
+.jg-w2 p{
+    text-indent:24px;
+    margin-bottom:10px;
+}
+.jg-zz{
+    width:470px;
+    float:left;
+}
+.jg-tu{
+    float:right;
+    width:220px;
+}
+.jg-tu li img{
+    padding:5px;
+    border:1px solid #ccc;
+    margin-bottom:15px;
+}
+p.jg-w3{
+    text-indent:0;
+}
+/*---------------组织机构-机构职能样式结束-------------------*/
+
+
+
+
+/*---------------中华人民共和国上海海事局组织机构样式结束-------------------*/
+.zj-tu{
+    /*background:url(../Images/jg-bg.jpg) no-repeat bottom ;
+    padding-bottom:36px;*/
+    width:600px;
+    margin:0 auto;
+    text-align:center;
+    margin-top:10px;
+}
+.zj-tu a{
+    display:block;
+    font-size:16px;
+    font-family:"微软雅黑";
+    border:1px solid #bdd7ee;
+    line-height:30px;
+    background:#edf4fa;
+    width:145px;
+    height:30px;
+    margin:0 auto;
+}
+.zj-tu1{
+    /*background:url(../Images/jg-bg1.jpg) no-repeat bottom ;
+    padding-bottom:44px;*/
+    width:580px;
+    margin:0 auto;
+    text-align:center;
+}
+.zj-tu1 a{
+    display:block;
+    float:left;
+    font-size:16px;
+    font-family:"微软雅黑";
+    border:1px solid #bdd7ee;
+    line-height:30px;
+    background:#edf4fa;
+    width:155px;
+    height:30px;
+}
+.zj-bm ul{
+    float:left;
+    padding-left:20px;
+    margin-right:10px;
+}
+.zj-bm ul li a{
+    display:block;
+    background:#edf4fa;
+    border:1px solid #bdd7ee;
+    text-align:center;
+    font-size:14px;
+    width:130px;
+    height:24px;
+    line-height:24px;
+    margin-bottom:3px;
+    color:#666;
+}
+.zj-bm ul li a:hover{
+    color:#164e98;
+}
+.jg-zj{
+    margin-left:18px;
+}
+.zj-tc{
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding:10px;
+    color:#666;
+    line-height:22px;
+}
+.zj-gd{
+    text-align:center;
+    clear:both;
+    margin-top:13px;
+}
+.zj-but1{
+    background:url(../Images/gb.jpg) no-repeat;
+    width:83px;
+    height:27px;
+    border:none;
+    cursor:pointer;
+}
+.zj-but2{
+    background:url(../Images/dc.jpg) no-repeat;
+    width:83px;
+    height:27px;
+    border:none;
+    cursor:pointer;
+}
+
+/*---------------中华人民共和国上海海事局组织机构样式结束-------------------*/
+
+
+
+
+
+/*---------------组织机构-领导介绍样式开始-------------------*/
+.ld-1{
+    width:352px;
+    height:190px;
+    border-top:1px solid #dadada;
+    border-right:1px solid #dadada;
+    float:left;
+}
+
+.ld-2{
+    width:352px;
+    height:190px;
+    border-top:1px solid #dadada;
+    float:left;
+}
+.ld-01{
+    width:340px;
+    height:190px;
+    margin-left:10px;
+    font-size:14px;
+    font-weight:bold;
+}
+.ld-02{
+    width:310px;
+    height:190px;
+    margin-left:40px;
+    font-size:14px;
+    font-weight:bold;
+}
+.ld-but1{
+    width:105px;
+    height:29px;
+    background:url(../Images/ld-but1.jpg) no-repeat;
+    font-size:14px;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+.ld-but2{
+    width:105px;
+    height:29px;
+    background:url(../Images/ld-but2.jpg) no-repeat;
+    font-size:14px;
+    color:#000;
+    border:none;
+    cursor:pointer;
+    margin-top:5px;
+}
+.ld-zt{
+    margin-top:15px;
+    border:1px solid #ececec;
+}
+.ld-zt td{
+    background:#f4f8fe;
+    border:1px solid #fff;
+    padding:0 10px;
+    font-size:14px;
+    line-height:30px;
+    color:#666;
+}
+.ld-m td{
+    background:#e7f1fd;
+    font-weight:bold;
+    color:#000;
+}
+.ld-ts{
+    padding:5px 25px;
+}
+.ld-ts a{
+    font-size:14px;
+    color:#1253af;
+    margin-right:15px;
+    line-height:30px;
+}
+.ld-bt{
+    font-size:20px;
+    font-weight:bold;
+    color:#000;
+    line-height:30px;
+}
+.ld-js p{
+    color:#000;
+    line-height:22px;
+    text-indent:0;
+}
+
+/*---------------组织机构-领导介绍样式结束-------------------*/
+
+
+
+/*---------------新闻列表样式开始-------------------*/
+.xw-news {
+    padding:0 7px;
+}
+.xw-news ul li{
+    line-height:30px;
+    border-bottom:1px dashed #ccc;
+    background:url(../Images/li-bg.jpg) no-repeat left center;
+    padding-left:15px;
+}
+.xw-news span{
+    float:right;
+    color:#666;
+}
+
+/*---------------新闻列表样式结束-------------------*/
+
+
+
+
+/*---------------新闻列表详情样式开始-------------------*/
+.xw-title{
+    text-align:center;
+    color:#666;
+}
+.xw-title h1{
+    font-size:18px;
+}
+.xw-wz{
+    font-size:14px;
+    border-top:1px dashed #ccc;
+    width:705px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:10px;
+    padding:15px 0;
+
+}
+.xw-wz p{
+    line-height:30px;
+    text-indent:28px;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align:left;
+}
+.xw-wz p a{
+    color:#04209d;
+    text-decoration:underline;
+}
+.news-fj{
+    border-top:1px dashed #ccc;
+    padding:10px 0;
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+    line-height:30px;
+}
+.news-fj a{
+    color:#04209d;
+    font-weight:normal;
+    text-decoration:underline;
+}
+.news-upd{
+    border-top:1px dashed #ccc;
+    padding:10px 0;
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+    line-height:30px;
+}
+.news-upd a{
+    color:#04209d;
+    text-decoration:underline;
+}
+/*---------------新闻列表详情样式结束-------------------*/
+
+
+
+/*---------------港区写真样式开始-------------------*/
+
+.gq-xz a.xz-1{
+    display:block;
+    width:186px;
+    height:128px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.gq-xz ul li{
+    width:219px;
+    height:166px;
+    background:url(../Images/xz-bg.jpg) no-repeat top center ;
+    padding:6px 10px 6px 6px;
+    float:left;
+    text-align:center;
+    line-height:13px;
+}
+.gq-tc{
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
+/*---------------港区写真样式结束-------------------*/
+
+
+
+
+/*---------------社会关注的新闻详情样式开始-------------------*/
+.xw-gz{
+    border:1px solid #b5cce8;
+    background:url(../Images/xw-bg.jpg) repeat-x;
+    margin-top:5px;
+}
+
+.xw-gz-bt h1{
+    font-size:14px;
+    color:#000;
+    font-weight:bold;
+    background:url(../Images/xg-bg.jpg) no-repeat;
+    width:100px;
+    height:35px;
+    text-align:center;
+    line-height:25px;
+}
+.sh-news {
+    padding:0 10px 10px 10px;
+}
+.sh-news ul li{
+    line-height:24px;
+    border-bottom:1px dashed #ccc;
+    background:url(../Images/li-bg.jpg) no-repeat left center;
+    padding-left:15px;
+}
+.sh-news ul li a{
+    color:#666;
+}
+.sh-news ul li a:hover{
+    color:#164e98;
+}
+
+
+/*---------------社会关注的新闻详情样式结束-------------------*/
+
+
+
+/*---------------通知公告的内容详情显示样式开始-------------------*/
+
+.tz-zt{
+    border:1px solid #ececec;
+    margin-bottom:20px;
+}
+.tz-zt td{
+    background:#f4f8fe;
+    border:1px solid #fff;
+    padding:0 10px;
+    font-size:14px;
+    line-height:30px;
+    color:#666;
+}
+.tz-zt tr.ld-m td{
+    background:#e7f1fd;
+    font-weight:bold;
+    color:#000;
+}
+.tz-hs h1{
+    text-align:center;
+    font-size:16px;
+    color:#000;
+    font-weight:bold;
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+/*---------------通知公告的内容详情显示样式结束-------------------*/
+
+
+/*---------------通航服务样式开始-------------------*/
+.th-zn{
+    color:#666;
+    line-height:26px;
+}
+
+.th-zn p{
+    padding-bottom:10px;
+    padding-left:10px;
+}
+
+.th-w1 img{
+    float:left;
+    margin-right:35px;
+}
+/*---------------通航服务样式结束-------------------*/
+
+
+
+/*---------------通航管理-历史通告,历史航警样式开始-------------------*/
+.ls-hx{
+    font-size:14px;
+    font-weight:bold;
+    color:#164e98;
+    display:block;
+    margin-bottom:5px;
+}
+.ls-hj{
+    font-size:12px;
+}
+
+.ls-hj td{
+    padding:4px 10px;
+    border:1px solid #ececec;
+    background:#fcfce2;
+}
+.ls-1 td{
+    background:#f9fcf6;
+}
+/*---------------通航管理-历史通告,历史航警样式开始-------------------*/
+
+
+
+.sy-h1{
+    font-size:14px;
+    color:#164e98;
+    border-bottom:1px dashed #ccc;
+    line-height:30px;
+    margin-bottom:10px;
+}
+.sh-gl{
+    height:34px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    background:#fcfbfb;
+    line-height:34px;
+    font-size:12px;
+    padding-left:10px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.sh-gl h1{
+    font-weight:bold;
+    color:#333;
+}
+.sh-zn{
+    color:#666;
+    line-height:24px;
+}
+
+.sh-zn p{
+    padding-bottom:10px;
+    padding-left:5px;
+}
+
+
+
+/*口岸计划EDI申报结果查询样式开始*/
+.ka-k{
+    width:670px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom:30px;
+    background:#fff;
+}
+.ka-tit{
+    height:38px;
+    line-height:38px;
+    background:url(../Images/ka-tit.jpg) repeat-x;
+    font-size:14px;
+    color:#000;
+    border-bottom:1px solid #ccc;
+    margin-bottom:10px;
+}
+.ka-tit h1{
+    font-weight:bold;
+    padding-left:15px;
+}
+.ka-k table td{
+    line-height:35px;
+    font-size:14px;
+    color:#333;
+}
+.ka-k table td h1{
+    font-weight:bold;
+    color:#000;
+}
+.ka-in1{
+    width:330px;
+    height:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    line-height:20px;
+}
+.ka-in2{
+    width:200px;
+    height:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    line-height:20px;
+    float:left;
+}
+.ka-sel2{
+    width:120px;
+    height:22px;
+    background:#fff;
+    border:1px solid #ccc;
+    float:left;
+    margin-right:10px;
+}
+.ka-but{
+    width:139px;
+    height:30px;
+    background:url(../Images/ka-but.jpg) no-repeat;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+.ka-but1{
+    width:80px;
+    height:30px;
+    background:url(../Images/ka-but1.jpg) no-repeat;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+.ka-but2{
+    width:90px;
+    height:30px;
+    background:url(../Images/ka-but2.jpg) no-repeat;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+.ka-but3{
+    width:110px;
+    height:30px;
+    background:url(../Images/ka-but3.jpg) no-repeat;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+.ka-k1{
+    margin:0 auto;
+    border:1px solid #ccc;
+    background:#f5f8ff;
+}
+.ka-tit1{
+    height:38px;
+    line-height:38px;
+    background:url(../Images/ka-tit.jpg) repeat-x;
+    font-size:14px;
+    color:#000;
+    border-bottom:1px solid #ccc;
+}
+.ka-tit1 h1{
+    font-weight:bold;
+    padding-left:10px;
+}
+.ka-k1 table td{
+    height:30px;
+    border:1px solid #B4C9E3;
+    padding:2px 5px;
+    font-size:12px;
+    color:#333;
+    line-height:16px;
+}
+.kx-t1 td{
+    background:#e8f2fe;
+    font-weight:bold;
+    color:#000;
+}
+/*口岸计划EDI申报结果查询样式结束*/
+
+
+/*3DOC证书查询样式开始*/
+.zs-cx{
+    font-size:14px;
+    color:#000;
+    padding:0 5px;
+    margin-bottom:12px;
+    font-weight:bold;
+}
+.cx-ta{
+    border:1px solid #ccc;
+}
+.cx-tab td{
+    line-height:16px;
+    border:1px solid #e4e4e4;
+    padding:5px 7px;
+    color:#666;
+}
+.cx-t1 td{
+    font-weight:bold;
+    background:url(../Images/ka-tit.jpg) repeat-x bottom;
+    line-height:18px;
+    color:#333;
+    font-size:13px;
+    border-bottom:1px solid #dcdada;
+}
+/*3DOC证书查询样式结束*/
+
+
+/*----------受理窗口样式开始-----------*/
+.sl-ck{
+    margin-bottom:20px;
+}
+.sl-ck table td{
+    color:#666;
+    font-size:12px;
+}
+.sl-ck table tr.cx-t1 td{
+    color:#000;
+}
+/*----------------受理窗口样式结束-----------------------*/
+
+
+/*----------------信息公开样式开始---------------------*/
+.sq-xx td{
+    padding:5px 5px;
+    font-size:14px;
+}
+.sq-xx h1{
+    font-size:16px;
+    font-weight:bold;
+    color:#000;
+    text-align:center;
+    border-bottom:1px dashed #ccc;
+    line-height:35px;
+    margin-bottom:10px;
+}
+.sq-xx font{
+    color:#f00;
+    margin-right:3px;
+}
+.sq-sx{
+    margin-top:15px;
+}
+
+.xx-gk{
+    margin-bottom:10px;
+    padding-left:7px;
+    position:relative;
+}
+.xx-gk a{
+    border:1px solid #ccc;
+    display:block;
+    width:690px;
+    height:158px;
+    overflow:hidden;
+}
+.xx-gk a.zc-q{
+    border:none;
+    display:block;
+    width:103px;
+    height:30px;
+    overflow:hidden;
+    position:absolute;
+    left: 552px;
+    top: 99px;
+}
+/*----------------信息公开样式结束-----------------------*/
+
+
+
+/*----------------温馨提示样式开始-----------------------*/
+.tip{
+    width:579px;
+    height:159px;
+    margin:0 auto;
+    background:url(../Images/tip.jpg) no-repeat;
+    padding-top:100px;
+    line-height:26px;
+    color:#333;
+    font-size:14px;}
+.tip input{
+    width:89px;
+    height:29px;
+    background: url(../Images/fh-sy.png) no-repeat;
+    margin-top:15px;
+    border:none;
+    cursor:pointer;}
+.tip-i{
+    float:left;
+    padding-left:54px;
+}
+.tip ul{
+    padding-left:190px;
+    padding-right:70px;
+}
+/*----------------温馨提示样式结束-----------------------*/
+
+
+
+
+/*----------------咨询页面样式开始-----------------------*/
+.zixun-k{
+    width:221px;
+    margin:0 auto;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom:30px;
+    background:#fff;
+    font-size:14px;
+}
+.zixun-k table td{
+    line-height:35px;
+    font-size:14px;
+    color:#333;
+}
+.z-1{
+    width:150px;
+    height:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    line-height:20px;
+}
+.zx-p{
+    background:#ecf2ff;
+    border-top:1px dashed #ccc;
+    border-bottom:1px dashed #ccc;
+    padding:5px;
+    text-indent:24px;
+    line-height:22px;
+    color:#333;
+}
+.zx-pp{
+    background:#ecf2ff;
+    border-top:1px dashed #ccc;
+    border-bottom:1px dashed #ccc;
+    padding:5px;
+    line-height:22px;
+    color:#333;
+}
+.zx-pp font{
+    color:#f00;
+}
+.zx-tab{
+    margin-top:10px;
+}
+.zx-tab td{
+    padding:4px 3px;
+    color:#666;
+}
+.zx-tab font{
+    color:#f00;
+}
+.zx-fj{
+    background:#fff;
+    border:none;
+    border:1px solid #ccc;
+    height:23px;
+    line-height:23px;
+    width:380px;
+}
+.inp02{background:url(../images/but1_03.jpg) no-repeat; width:43px; height:23px; border:none; cursor:pointer;}
+.zx-tj td{
+    padding-top:10px;
+}
+.zx-tab b{
+    color:#000;
+}
+.ka-in3{
+    width:250px;
+    height:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    line-height:20px;
+    float:left;
+}
+.ka-in4{
+    width:480px;
+    height:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    line-height:20px;
+}
+.zx-scfj{
+    line-height:24px;
+    color:#f00;
+}
+
+
+.zx-zn{
+    color:#666;
+    line-height:22px;
+    border-bottom:1px dashed #ccc;
+    margin-bottom:10px;
+}
+
+.zx-zn p{
+    padding-bottom:5px;
+    padding-left:5px;
+    text-indent:24px;
+}
+.zx-zn p.zx-wo{
+    text-align:center;
+    text-indent:0;
+    padding:0;
+    margin:0;
+}
+.zx-but2{
+    width:90px;
+    height:30px;
+    background:url(../Images/ka-but2.jpg) no-repeat;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+.zx-k{
+    width:703px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    padding-bottom:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    background:#fff;
+}
+.zx-tit{
+    height:38px;
+    line-height:38px;
+    background:url(../Images/ka-tit.jpg) repeat-x;
+    font-size:14px;
+    color:#000;
+    border-bottom:1px solid #ccc;
+    margin-bottom:10px;
+}
+.zx-tit h1{
+    font-weight:bold;
+    padding-left:10px;
+}
+.zx-k table td{
+    color:#333;
+}
+.zx-k table td h1{
+    font-weight:bold;
+    color:#000;
+}
+.zx-tab2{
+    width:680px;
+    margin:0 auto;
+    font-weight:bold;
+}
+.zx-tab1{
+    width:680px;
+    margin:0 auto;
+    margin-top:10px;
+}
+.zx-tab1 td{
+    line-height:16px;
+    border:1px solid #e4e4e4;
+    padding:5px 7px;
+    color:#666;
+}
+.zx-t1 td{
+    font-weight:bold;
+    background:url(../Images/ka-tit.jpg) repeat-x bottom;
+    line-height:18px;
+    color:#333;
+    font-size:13px;
+    border-bottom:1px solid #dcdada;
+}
+.zx-sl{
+    width:640px;
+    margin:0 auto;
+    line-height:26px;
+    font-size:14px;
+    color:#000;
+    font-weight:bold;
+}
+.zx-sl p.zx-ask{
+    line-height:22px;
+    text-indent:24px;
+}
+.zx-zn1{
+    color:#666;
+    line-height:22px;
+    margin-bottom:10px;
+}
+
+.zx-zn1 p{
+    padding-bottom:5px;
+    padding-left:5px;
+    text-indent:24px;
+    font-weight:normal;
+}
+.zx-zn1 p.zx-wo{
+    text-align:center;
+    text-indent:0;
+    padding:0;
+    margin:0;
+}
+.zx-but1{
+    width:90px;
+    height:30px;
+    background:url(../Images/ka-but2.jpg) no-repeat;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+.zx-sel{
+    font-size:14px;
+    color:#333;
+    line-height:24px;
+    width:640px;
+    margin:0 auto;
+    margin-bottom:15px;
+}
+.zx-sl td font{
+    color:#05589C;
+}
+
+.xs-k{
+    width:670px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom:30px;
+    background:#fff;
+}
+.xs-tit{
+    height:38px;
+    line-height:38px;
+    background:url(../Images/ka-tit.jpg) repeat-x;
+    font-size:14px;
+    color:#000;
+    border-bottom:1px solid #ccc;
+    margin-bottom:10px;
+}
+.xs-tit h1{
+    font-weight:bold;
+    padding-left:15px;
+}
+.xs-k table td{
+    padding:3px 5px;
+    color:#3A3A3A;
+}
+.zx-wt a{
+    display:block;
+    line-height:20px;
+    color:#04209d;
+    text-decoration:underline;
+}
+.su-jb a{
+    color:#04209d;
+    text-decoration:underline;
+    margin-left:10px;
+    line-height:24px;
+}
+.su-xy{
+    margin-top:13px;
+}
+.su-xy font{
+    color:#f00;
+}
+.tou-su td{
+    padding:3px 5px;
+    color:#333;
+    line-height:24px;
+}
+
+.tou-but{
+    width:75px;
+    height:25px;
+    background:url(../Images/tousu-but.jpg) no-repeat;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+}
+/*----------------咨询页面样式结束-----------------------*/
+
+
+
+/*-------------执法监督页面样式开始---------------*/
+.zfjd-k{
+    width:703px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    background:#fff;
+}
+.zfjd-k p{
+    padding:0 10px 10px 10px;
+    color:#666;
+    line-height:22px;
+}
+.zfjd-k p b{
+    color:#000;
+}
+.zf-nom{
+    font-weight:normal;
+    font-size:12px;
+    margin-left:5px;
+    color:#336699;
+}
+.zf-cx{
+    padding-left:10px;
+    font-size:12px;
+}
+.jd-zf{
+    width:690px;
+    margin:0 auto;
+    font-size:12px;}
+.jd-zf td{
+    line-height:24px;
+}
+.zf-jd-p{
+    background:#ecf2ff;
+    border-top:1px dashed #ccc;
+    border-bottom:1px dashed #ccc;
+    padding:5px;
+    line-height:22px;
+    color:#333;
+}
+.zf-jd-p font{
+    color:#f00;
+}
+.zf-js-ym{
+    padding-left:10px;
+    font-size:14px;
+    margin-bottom:10px;
+}
+.jsym-tab{
+    width:680px;
+    margin:0 auto;
+}
+.jsym-tab td{
+    line-height:16px;
+    border:1px solid #e4e4e4;
+    padding:5px 7px;
+    color:#666;
+}
+.js-ts{
+    color:#f00;
+}
+.js-ts span{
+    margin:0 5px;
+}
+.js-xing{
+    margin-top:7px;
+}
+.js-xing font{
+    color:#f00;
+}
+/*-------------执法监督页面样式结束---------------*/
+
+/*-------------内设机构页面样式开始---------------*/
+.bg-dl{
+    line-height:22px;
+    margin-bottom:10px;
+    color:#666;
+}
+.bg-dl b{
+    color:#333;
+    font-size:14px;
+}
+.bg-dl span{
+    color:#05589c;
+}
+/*-------------内设机构页面样式结束---------------*/
+
+
+/*-------------收费依据页面样式结束---------------*/
+.sf-wz{
+    font-size:12px;
+    border-top:1px dashed #ccc;
+    width:705px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:10px;
+    padding:15px 0;
+    text-align:center;
+}
+.sf-wz p{
+    line-height:24px;
+    text-align:left;
+}
+.sf-wz p a{
+    color:#04209d;
+    text-decoration:underline;
+}
+.sf-b{
+    font-weight:bold;
+    font-size:14px;
+    margin-top:5px;
+    line-height:35px;
+}
+/*-------------收费依据页面样式结束---------------*/
+
+/*---------网上办事页面样式开始-----------------*/
+.net-bs{
+    margin-top:10px;
+    width:958px;
+}
+.ws-bs{
+    display:block;
+    width:958px;
+    height:226px;
+    overflow:hidden;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+}
+.net-an{
+    padding-bottom:8px;
+}
+.w-bs-a a{
+    display:block;
+    width:200px;
+    height:33px;
+    line-height:33px;
+    background:url(../Images/w-banshi.jpg) no-repeat;
+    font-size:16px;
+    font-family: "微软雅黑" ;
+    color:#fff;
+    padding-left:25px;
+    text-align:left;
+}
+.w-bs-a a:hover{
+    color:#c9edff;
+    text-decoration:none;
+}
+.w-bs-a{
+    width:800px;
+    margin:0 auto;
+}
+.w-bs-a td{
+    padding:10px 0 0 0;
+    border-bottom:1px solid #d6d6d6;
+}
+/*---------网上办事页面样式结束-----------------*/
+
+
+/*---------国际危规样式开始-----------*/
+.wj-zw td{
+    padding:3px 5px;
+    border:1px solid #ddd;
+    background:#fcfcef;
+}
+.wj-zw th{
+    padding:5px 5px;
+    border:1px solid #ddd;
+    background:#f9fcf6;
+    color:#000;
+}
+/*---------国际危规样式结束-----------*/
+
+
+/*--------局长信箱页面样式开始------------------*/
+.jz-news {
+    width:700px;
+    margin:0 auto;
+    padding-bottom:20px;
+}
+.jz-bt{
+    margin-top:10px;
+}
+
+.jz-bt table{
+    background:#ecf2ff;
+    border-top:1px dashed #ccc;
+    border-bottom:1px dashed #ccc;
+    padding:5px;
+    line-height:22px;
+    color:#666;
+}
+.jz-bt table td{
+    padding:3px 5px;
+}
+.jz-bt table td font{
+    color:#f00;
+}
+.jz-news table td{
+    padding:6px 5px;
+}
+/*--------局长信箱页面样式结束------------------*/
+
+
+.zx-yj{
+    background:url(../Images/y-j.jpg) no-repeat;
+    height:57px;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+.zx-yj a{
+    display:block;
+    background:url(../Images/zx-y-j.jpg) no-repeat;
+    width:135px;
+    height:30px;
+    text-indent:-9999px;
+    margin-top:13px;
+    margin-left:13px;
+}
+
+
+
+
+.sx-1 li{
+    line-height:24px;
+    margin-bottom:10px;
+    border-bottom:1px dotted #ccc;
+    color:#333;
+    padding-bottom:5px;
+}
+.sx-1 a{
+    font-size:14px;
+    color:#0000CC;
+    text-decoration:underline;
+    line-height:24px;
+}
+.sx-1 span{
+    color:#C60A00;
+}
+.zs-none{
+    width:500px;
+    margin:0 auto;
+    background:#EBF6FE;
+    border:1px solid #C0C0C0;
+    padding:30px 20px;
+    margin-top:50px;
+    margin-bottom:30px;
+    font-size:14px;
+}
+.zs-none span{
+    color:#C60A00;
+}
+.gj-zi td{
+    font-weight:normal;
+    padding:5px;
+}
+.ka-in5{
+    width:130px;
+    height:20px;
+    background:#fff;
+    border:1px solid #ccc;
+    line-height:20px;
+    float:left;
+}
+
+
+
+
+.hs-cx td{
+    padding:10px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+.hs-cx td a{
+    display:block;
+    background:url(../Images/ka-tit.jpg) repeat-x;
+    border:1px solid #ccc;
+    padding:0 20px;
+    height:30px;
+    line-height:30px;
+    margin:5px 0;
+}
+.hs-cx td a:hover{
+    background:#ebf0f6;
+    color:#336699;
+    text-decoration:none;
+}
+
+
+.da-yin{
+    display:block;
+    color:#f00;
+    margin-top:7px;
+    text-align:right;
+}
+.da-yin a{color:#f00;}

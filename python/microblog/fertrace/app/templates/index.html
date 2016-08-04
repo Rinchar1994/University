@@ -1,0 +1,550 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="zh-CN">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../static/css_front/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css_front/cssreset-min.css">
+  <link rel="stylesheet" href="../static/css_front/unslider.css">
+  <link rel="stylesheet" href="../static/css_front/style.css">
+  <link rel="stylesheet" href="../static/css_front/style2.css">
+  <link rel="stylesheet" href="../static/css_front/second.css">
+  <link rel="stylesheet" href="../static/css_front/comment.css">
+  <link rel="stylesheet" href="../static/css_front/main.css">
+
+  <script type="text/javascript" src="../static/js_front/respond.js"></script>
+  <script type="text/javascript" src="../static/js_front/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../static/js_front/unslider.js"></script>
+  <script type="text/javascript" src="../static/js_front/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../static/js_front/menu.js"></script>
+  <script type="text/javascript" src="../static/js_front/tab.js"></script>
+
+
+</head>
+<body>
+<div class="header">
+  <div class="container ">
+    <div class="row row_site_title" >
+      <div class="col-md-8" style="padding-left:0px">
+        <a href="#" class="site_title">
+          <img src="../static/images_front/site_title.png">
+        </a>
+      </div>
+      <div class="col-md-4 header_search">
+        <form action="{{ url_for("index") }}" method="post" >
+        <div class="input-group input-group-sm" style="margin-top:65px;padding-left:100px;">
+
+          <input type="text" class="form-control" placeholder="查询" id="title" name="title">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary btn-sm" type="submit">查询</button>
+
+                        </span>
+
+        </div>
+      </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="menu_clear_top"></div>
+<div class="menu">
+  <div class="container ">
+    <div class="row">
+      <div class="header_menu fl hidden-xs">
+        <ul>
+          <li class="nav_on mainlevel">
+            <a href="/initial.do" class="hidden-xs">网站首页</a></li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a href="/getAllLeaderFront.do" class="hidden-xs">组织机构</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="/getAllLeaderFront.do" target="">领导介绍</a></li>
+              <li><a href="Introduction.jsp" target="">单位简介</a></li>
+              <li><a href="/getAllInstitutionFront.do" target="">机构设置</a></li>
+            </ul>
+          </li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a href="/getNewslistbyGroupNameHsxw.do?groupname=新闻动态" class="hidden-xs">海事新闻</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="/getNewslistbyGroupNameHsxw.do?groupname=新闻动态" target="">新闻动态</a></li>
+              <li><a href="/getNewslistbyGroupNameHsxw.do?groupname=媒体报道" target="">媒体报道</a></li>
+              <li><a href="" target="">海事文化</a></li>
+            </ul>
+          </li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a href="/getNewslistbyGroupNameXxgk.do?groupname=信息公开规定、指南" class="hidden-xs">信息公开</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="/getNewslistbyGroupNameXxgk.do?groupname=信息公开规定、指南" target="">信息公开规定、指南</a></li>
+              <li><a href="/getNewslistbyGroupNameXxgk.do?groupname=海事项目" target="">海事项目</a></li>
+            </ul>
+          </li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a  class="hidden-xs" >网上办事</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="http://www.shwsmsa.cn:8080" target="">北槽申报</a></li>
+              <li><a href="http://222.66.10.70/webSiteInit.do" target="">防污染申报</a></li>
+              <li><a href="http://www.shmsa.gov.cn/SearchViews/DangerousGoodsEDISearch.aspx?CatalogId=7e297725-7d78-4616-99ab-a69c46181eea" target="">EDI</a></li>
+              <li><a href="http://edu.shmsa.gov.cn/login.aspx" target="">远程违章处理</a></li>
+             <%-- <li><a href="" target="">其它</a></li>--%>
+            </ul>
+          </li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a href="/getNewslistbyGroupNameTzgg.do?groupname=航行通告" class="hidden-xs">通知公告</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="/getNewslistbyGroupNameTzgg.do?groupname=航行通告" target="">航行通告</a></li>
+              <li><a href="/getNewslistbyGroupNameTzgg.do?groupname=航行警告" target="">航行警告</a></li>
+              <li><a href="/getNewslistbyGroupNameTzgg.do?groupname=其它通知" target="">其它通知</a></li>
+            </ul>
+          </li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a href="/getNewslistbyGroupNameZwgk.do?groupname=办事指南" class="hidden-xs">政务公开</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="/getNewslistbyGroupNameZwgk.do?groupname=办事指南" target="">办事指南</a></li>
+              <li><a href="/showAllTables.do" target="">表格下载</a></li>
+              <li><a href="/getNewslistbyGroupNameZwgk.do?groupname=规费征收" target="">规费征收</a></li>
+            </ul>
+          </li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a href="/getNewslistbyGroupNameZcfg.do?groupname=海事法律法规" class="hidden-xs">政策法规</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="/getNewslistbyGroupNameZcfg.do?groupname=海事法律法规" target="">海事法律法规</a></li>
+              <li><a href="/getNewslistbyGroupNameZcfg.do?groupname=国际公约" target="">国际公约</a></li>
+            </ul>
+          </li>
+          <img class="shuxian fl" src="../static/images_front/shuxian.png">
+          <li class="mainlevel" id="mainlevel_01">
+            <a href="/getNewslistbyGroupNameHdjl.do?groupname=意见征求" class="hidden-xs">互动交流</a>
+            <ul id="sub_01" style="display: none;">
+              <li><a href="http://www.shwsmsa.cn:8080/FAQCenter/FAQPage.aspx" target="">钱船长服务热线</a></li>
+              <li><a href="Report.jsp" target="">投诉举报</a></li>
+             <%-- <li><a href="hdjl_wjdc.html" target="">问卷调查</a></li>--%>
+              <li><a href="http://www.shmsa.gov.cn/NewsList.aspx?CatalogId=070a6774-7a71-4a24-b378-5fc371d85b07" target="">在线访谈</a></li>
+              <li><a href="/getNewslistbyGroupNameHdjl.do?groupname=意见征求" target="">意见征求</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="header_login fr">
+        <a href="login"><img src="../static/images_front/header_login.png"><span>登录</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main" style="margin-top:40px;">
+  <div class="container">
+    <div class="row row_title">
+      <div class="col-md-9">
+        <div class="news_title1 fl" id="hsxw_first"><a href="/getNewslistbyGroupNameHsxw.do?groupname=新闻动态"> 海事新闻</a></div>
+        <div class="news_tab fl" id="news_hsxw_tab">
+          <ul>
+            <li><a href="/getNewslistbyGroupNameHsxw.do?groupname=新闻动态">新闻动态</a></li>
+            <li><a href="/getNewslistbyGroupNameHsxw.do?groupname=媒体报道">媒体报道</a></li>
+            <li><a href="">海事文化</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="news_title1"><a href="" target="">组织机构</a></div>
+      </div>
+    </div>
+    <div class="row row_content">
+      <div class="col-sm-4">
+        <div class="news_hsxw_images">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="${filepathlist.get(0)}" alt="" id="img_slide_1">
+
+     <%--           <div class="carousel-caption">
+                  <h3>${filelist.get(0)}</h3>
+                </div>--%>
+              </div>
+              <div class="item">
+                <img src="${filepathlist.get(1)}" alt="" id="img_slide_2">
+
+               <%-- <div class="carousel-caption">
+                  <h3>${filelist.get(1)}</h3>
+                </div>--%>
+              </div>
+              <div class="item">
+                <img src="${filepathlist.get(2)}" alt="" id="img_slide_3">
+
+         <%--       <div class="carousel-caption">
+                  <h3>${filelist.get(2)}</h3>
+
+                </div>--%>
+              </div>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+
+        <%--海事新闻模块切换--%>
+        <div id="news_hsxw">
+          <div>
+            <div class="list_news fl news_hsxw_listnews">
+              <ul>
+                <c:forEach var="news" items="${list.get(0)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdHsxw.do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="list_news fl news_hsxw_listnews">
+              <ul>
+                <c:forEach var="news" items="${list.get(1)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdHsxw.do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="list_news fl news_hsxw_listnews">
+              <ul>
+                <c:forEach var="news" items="${list.get(2)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdHsxw.do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script>setTabs("hsxw_first","news_hsxw_tab")</script>
+      </div>
+      <div class="col-md-3" style="height: 300px">
+        <div class="ws_logo ">
+          <img src="../static/images_front/ws_logo.gif">
+        </div>
+        <div class="news_zzjg">
+          <ul>
+            <li><p class="text-center"><a href="/getAllLeaderFront.do" target="">领导介绍</a></p></li>
+            <li><p class="text-center"><a href="Introduction.jsp" target="" >单位简介</a></p></li>
+            <li><p class="text-center"><a href="/getAllInstitutionFront.do" target="">机构设置</a></p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row_title">
+      <div class="col-md-4">
+        <div class="news_title1"><a href="" target="_blank">网上办事</a></div>
+      </div>
+      <div class="col-md-8">
+        <div class="news_title1 fl" id="tzgg_first"><a href="/getNewslistbyGroupNameTzgg.do?groupname=航行通告" target="_blank">通知公告</a></div>
+        <div class="news_tab fl" id="news_tzgg_tab">
+          <ul>
+            <li><a href="/getNewslistbyGroupNameTzgg.do?groupname=航行通告">航行通告</a></li>
+            <li><a href="/getNewslistbyGroupNameTzgg.do?groupname=航行警告">航行警告</a></li>
+            <li><a href="/getNewslistbyGroupNameTzgg.do?groupname=其它通知">其它通知</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row row_content">
+      <div class="col-md-4">
+        <div class="new_guide">
+          <ul>
+            <li><a href="http://www.shwsmsa.cn:8080" class="newsa4">
+              <span class="newimg"><img src="resources/images_front/newsa1.png"></span>
+              <span class="newtitle">北槽申报</span></a></li>
+            <li><a href="http://222.66.10.70/webSiteInit.do" class="newsa4">
+                                <span class="newimg"><img src="resources/images_front/newsa2.png">
+                                </span><span class="newtitle">防污染申报</span></a></li>
+            <li><a href="http://www.shmsa.gov.cn/SearchViews/DangerousGoodsEDISearch.aspx?CatalogId=7e297725-7d78-4616-99ab-a69c46181eea" class="newsa4">
+                                <span class="newimg"><img src="resources/images_front/newsa3.png">
+                                </span><span class="newtitle">EDI</span></a></li>
+            <li><a href="http://edu.shmsa.gov.cn/login.aspx" class="newsa4">
+              <span class="newimg"><img src="resources/images_front/newsa4.png"></span>
+              <span class="newtitle">远程规章处理</span></a></li>
+            <%--<li><a href="" class="newsa4">
+              <span class="newimg"><img src="resources/images_front/newsa5.png"></span>
+              <span class="newtitle">远程违章处理</span></a></li>--%>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <%--//通知公告模块切换--%>
+        <div id="news_tzgg">
+          <div>
+
+          <div class="list_news">
+            <ul>
+              <c:forEach var="news" items="${list.get(3)}" varStatus="status"  >
+
+                <li><a href="/getNewscontentbyIdTzgg.do?id=${news.id}" target="_blank">
+                    ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+              </c:forEach>
+            </ul>
+          </div>
+          </div>
+          <div>
+            <div class="list_news">
+              <ul>
+                <c:forEach var="news" items="${list.get(4)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdTzgg.do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="list_news">
+              <ul>
+                <c:forEach var="news" items="${list.get(5)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdTzgg.do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <script>setTabs("tzgg_first","news_tzgg_tab")</script>
+      </div>
+    </div>
+
+    <div class="row row_title">
+      <div class="col-md-4">
+        <div class="news_title1"><a href="/getNewslistbyGroupNameXxgk.do?groupname=信息公开规定、指南" target="_blank">信息公开</a></div>
+      </div>
+      <div class="col-md-8">
+        <div class="news_title1 fl" id="zwgk_first"><a href="/getNewslistbyGroupNameZwgk.do?groupname=办事指南" target="_blank">政务公开</a></div>
+        <div class="news_tab fl" id="news_zwgk_tab">
+          <ul>
+            <li><a href="/getNewslistbyGroupNameZwgk.do?groupname=办事指南">办事指南</a></li>
+            <li><a href="/showAllTables.do">表格下载</a></li>
+            <li><a href="/getNewslistbyGroupNameZwgk.do?groupname=规费征收">规费征收</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row row_content">
+      <div class="col-md-4">
+        <div class="news_xxgk">
+          <ul>
+            <li><p class="text-center"><a href="/getNewslistbyGroupNameXxgk.do?groupname=信息公开规定、指南" target="_blank">信息公开规定、指南</a></p></li>
+            <li><p class="text-center"><a href="/getNewslistbyGroupNameXxgk.do?groupname=海事项目" target="_blank">海事项目</a></p></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <%--//政务公开模块切换--%>
+        <div  id="news_zwgk">
+          <div>
+
+            <div class="list_news">
+              <ul>
+                <c:forEach var="news" items="${list.get(6)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdZwgk..do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+          <div>
+
+            <div class="list_news">
+              <ul>
+                <c:forEach var="news" items="${listtable}" varStatus="status"  >
+
+                  <li><a href="/downloadFiles.do?fileName=${news}" target="_blank">${news}
+                      </a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+          <div>
+
+            <div class="list_news">
+              <ul>
+                <c:forEach var="news" items="${list.get(7)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdZwgk..do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script>setTabs("zwgk_first","news_zwgk_tab")</script>
+      </div>
+    </div>
+
+    <div class="row row_title">
+      <div class="col-md-4">
+        <div class="news_title1 fl"><a href="" target="_blank">互动交流</a></div>
+      </div>
+      <div class="col-md-8">
+        <div class="news_title1 fl" id="zcfg_first"><a href="/getNewslistbyGroupNameZcfg.do?groupname=海事法律法规" target="_blank">政策法规</a></div>
+        <div class="news_tab fl" id="news_zcfg_tab">
+          <ul>
+            <li><a href="/getNewslistbyGroupNameZcfg.do?groupname=海事法律法规">海事法律法规</a></li>
+            <li><a href="/getNewslistbyGroupNameZcfg.do?groupname=国际公约">国际公约</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row row_content">
+      <div class="col-md-4">
+        <div id="news_hdjl">
+          <div class="fl" style="width: 60%">
+            <div class="news_rexian">
+              <div class="fl">
+                <img src="../static/images_front/phone.png"/>
+              </div>
+              <div class="fl">
+                <span class="news_rexian_content">12395</span><br/>
+                <span class="news_rexian_content_small">全国统一水上遇险搜救电话</span>
+              </div>
+            </div>
+            <div class="news_rexian">
+              <div class="fl">
+                <img src="../static/images_front/phone.png"/>
+              </div>
+              <div class="fl">
+                <span class="news_rexian_content">021-56674033</span><br/>
+                钱船长热线
+              </div>
+            </div>
+          </div>
+          <div class="fl" style="width: 40%">
+            <a href="/getNewslistbyGroupNameHdjl.do?groupname=意见征求"><div class="news_jzxx">
+              <img src="../static/images_front/email.png"/>
+              <p class="text-center">意见征求</p>
+            </div></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+       <%-- //政策法规模块切换--%>
+        <div  id="news_zcfg">
+          <div>
+
+            <div class="list_news">
+              <ul>
+                <c:forEach var="news" items="${list.get(8)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdZcfg.do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+          <div>
+
+            <div class="list_news">
+              <ul>
+                <c:forEach var="news" items="${list.get(9)}" varStatus="status"  >
+
+                  <li><a href="/getNewscontentbyIdZcfg.do?id=${news.id}" target="_blank">
+                      ${news.title}<span class="news_date">${news.updateTime}</span></a></li>
+                </c:forEach>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script>setTabs("zcfg_first","news_zcfg_tab")</script>
+      </div>
+    </div>
+  </div>
+</div>
+<%@include file="foot.jsp"%>
+<div class="sideBar_float hidden-xs">
+  <div class="fr">
+    <ul>
+      <li>
+        <a href="http://webmail.shmsa.gov.cn/" target="_blank">
+          <div><img src="../static/images_front/work_email.png"></div>
+          办公邮箱</a></li>
+      <li>
+        <a href="http://weibo.com/u/1960704160" target="_blank">
+          <div><img src="../static/images_front/weibo.png"></div>
+          官方微博</a></li>
+      <li>
+        <a id="zcwxc" ><div><img src="../static/images_front/weixin.png"></div>
+          官方微信</a></li>
+    </ul>
+  </div>
+  <div class="zcwx fr" id="zcwx">
+    <img src="../static/images_front/wx_erweima.png">
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById('zcwxc').onmouseover = function () {
+      document.getElementById('zcwx').style.display = 'block';
+    }
+    document.getElementById('zcwxc').onmouseout = function () {
+      document.getElementById('zcwx').style.display = 'none';
+    }
+  </script>
+</div>
+<script>
+  if (window.chrome) {
+    $('.banner li').css('background-size', '100% 100%');
+  }
+
+  $('.banner').unslider({
+    arrows: true,
+    fluid: true,
+    dots: true
+  });
+
+  //  Find any element starting with a # in the URL
+  //  And listen to any click events it fires
+  $('a[href^="#"]').click(function () {
+    //  Find the target element
+    var target = $($(this).attr('href'));
+
+    //  And get its position
+    var pos = target.offset(); // fallback to scrolling to top || {left: 0, top: 0};
+
+    //  jQuery will return false if there's no element
+    //  and your code will throw errors if it tries to do .offset().left;
+    if (pos) {
+      //  Scroll the page
+      $('html, body').animate({
+        scrollTop: pos.top,
+        scrollLeft: pos.left
+      }, 1000);
+    }
+
+    //  Don't let them visit the url, we'll scroll you there
+    return false;
+  });
+
+
+</script>
+</body>
+</html>

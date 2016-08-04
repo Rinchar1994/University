@@ -1,0 +1,183 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link href="../static/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../static/css/H-ui.login.css" rel="stylesheet" type="text/css" />
+  <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="../static/css/iconfont/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <title>Register</title>
+
+</head>
+<body>
+<input type="hidden" id="TenantId" name="TenantId" value="" />
+<div class="header"></div>
+<div class="loginWraper">
+  <div id="loginform" class="loginBox">
+<div class="row">
+  <div class="span6 offset1">
+  {% for mess in get_flashed_messages() %}
+    
+    <div class="alert alert-info">
+      {{ mess }}
+    </div>
+        
+  {% endfor %}
+  </div>
+</div>
+      <form class="form form-horizontal" action="" method="post" name="form_register" id="form_register" enctype="multipart/form-data">
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60d;</i></label>
+        <div class="formControls col-8">
+          <input id="username" name="username" type="text" placeholder="账户" class="input-text size-L" >
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="password" name="password" type="password" placeholder="密码" class="input-text size-L">
+        </div>
+      </div>
+      {% if get_role=="1" %}
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="role" name="role" type="text" class="input-text size-L" value="蔬菜种植" readonly="true"/>
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="realname" name="realname" type="text" placeholder="真实姓名" class="input-text size-L" />
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="pos" name="pos" type="file" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="formControls col-8 col-offset-4">
+          <button name="signin" onclick="check1()" type="submit" class="btn btn-success radius size-L" >&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;</button>
+          <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;" />
+        </div>
+      </div>
+      {% endif %}
+      {% if get_role=="2" %}
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="role" name="role" type="text" class="input-text size-L" value="蔬菜存储" readonly="true"/>
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="realname" name="realname" type="text" placeholder="真实姓名" class="input-text size-L" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="formControls col-8 col-offset-4">
+          <button name="signin" onclick="check2()" type="submit" class="btn btn-success radius size-L" >&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;</button>
+          <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;" />
+        </div>
+      </div>
+      {% endif %}
+      {% if get_role=="3" %}
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="role" name="role" type="text" class="input-text size-L" value="蔬菜运输" readonly="true"/>
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="realname" name="realname" type="text" placeholder="真实姓名" class="input-text size-L" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="formControls col-8 col-offset-4">
+          <button name="signin" onclick="check2()" type="submit" class="btn btn-success radius size-L" >&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;</button>
+          <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;" />
+        </div>
+      </div>
+      {% endif %}
+      {% if get_role=="4" %}
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="role" name="role" type="text" class="input-text size-L" value="蔬菜收购" readonly="true"/>
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-8">
+          <input id="realname" name="realname" type="text" placeholder="真实姓名" class="input-text size-L" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="formControls col-8 col-offset-4">
+          <button name="signin" onclick="check2()" type="submit" class="btn btn-success radius size-L" >&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;</button>
+          <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;" />
+        </div>
+      </div>
+      {% endif %}
+    </form>
+  </div>
+</div>
+<div class="footer">Copyright©2015 中华人民共和国吴淞海事局</div>
+
+<script type="text/javascript" language="JavaScript">
+  function check1(){
+    if(document.getElementById("username").value == ""){
+      alert("用户名 为空！");
+      return false;
+    }
+    else if(document.getElementById("password").value == ""){
+      alert("密码 为空！");
+      return false;
+    }
+    else if(document.getElementById("realname").value == ""){
+        alert("真实姓名 为空！");
+        return false;
+    }
+    else if(document.getElementById("pos").value == ""){
+        alert("图片 为空！");
+        return false;
+    }
+    else{
+        document.getElementById("form_register").action = "register";
+        document.getElementById("form_register").submit();
+    }
+  }
+  
+  function check2(){
+    if(document.getElementById("username").value == ""){
+      alert("用户名 为空！");
+      return false;
+    }
+    else if(document.getElementById("password").value == ""){
+      alert("密码 为空！");
+      return false;
+    }
+    else if(document.getElementById("realname").value == ""){
+        alert("真实姓名 为空！");
+        return false;
+    }
+    else{
+        document.getElementById("form_register").action = "register";
+        document.getElementById("form_register").submit();
+    }
+  }
+
+</script>
+</body>
+</html>

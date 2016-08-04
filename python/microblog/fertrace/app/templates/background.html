@@ -1,0 +1,174 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="../static/css/favicon.ico"  >
+  <LINK rel="Shortcut Icon" href="../static/css/favicon.ico" />
+  <link href="../static/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../static/css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../static/css/skin/default/skin.css" rel="stylesheet" type="text/css" id="skin" />
+  <link href="../static/css/iconfont/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+  <title>H-ui.admin v2.3</title>
+<style>
+ .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+.dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+  }
+.dropdown:hover .dropdown-content {
+      display: block;
+  }
+  </style>
+</head>
+<body>
+<header class="Hui-header cl">
+  <ul class="Hui-userbar">
+    <li>管理员</li>
+    <li class="dropdown">
+      <a href="#" >{{username}} <i class="Hui-iconfont">&#xe6d5;</i></a>
+      <ul class="dropDown-content">
+        <li><a href="/information/{{username}}">个人信息</a></li>
+        <li><a href="login">退出</a></li>
+      </ul>
+    </li>
+  </ul>
+  <a aria-hidden="false" class="Hui-nav-toggle" href="#"></a> </header>
+<aside class="Hui-aside">
+  <input runat="server" id="divScrollValue" type="hidden" value="" />
+  <div class="menu_dropdown bk_2" id="menu_dropdown">
+    {% if role==2 or role==1 %}
+    <dl id="menu-organization">
+      <dt><i class="Hui-iconfont">&#xe60d;</i> 组织机构<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+      <dd>
+        <ul>
+          <li><a  href="/information/{{username}}">领导介绍</a></li>
+          <li><a  href="/information/{{username}}">机构设置</a></li>
+        </ul>
+      </dd>
+    </dl>
+    {% endif %}
+    <dl id="menu-article">
+      <dt><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+      <dl id="menu-article-second">
+        <c:forEach items="${topic}" var="topicname" varStatus="status1">
+        <dt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${topicname}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+           <dd>
+           <ul>
+            <c:forEach items="${group[status1.index]}" var="groupname" varStatus="status2">
+            <li>
+              <a _href="/getNewsbyGroupName.do?groupname=${groupname}&topicname=${topicname}" href="javascript:void(0)">&nbsp;&nbsp;${groupname}	</a>
+            </li>
+            </c:forEach>
+           </ul>
+           </dd>
+        </c:forEach>
+      </dl>
+    </dl>
+    {% if role==1 or role==3 %}
+    <dl id="menu-comments">
+      <dt><i class="Hui-iconfont">&#xe622;</i> 投诉举报<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+      <dd>
+        <ul>
+          <li><a _href="/getAllComplaint.do?pageNo=1" href="javascript:;">投诉列表</a></li>
+        </ul>
+      </dd>
+    </dl>
+  {% endif %}
+    {% if role==1 %}
+    <dl id="menu-admin">
+      <dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+      <dd>
+        <ul>
+          <li><a _href="getAllAdmin.do" href="javascript:void(0)">管理员列表</a></li>
+        </ul>
+      </dd>
+    </dl>
+    {% endif %}
+    {% if role==1 or role==2 or role==4 %}
+    <dl id="menu-file">
+      <dt><i class="Hui-iconfont">&#xe613;</i> 文件管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+      <dd>
+        <ul>
+          {% if role==1 or role==4 %}
+          <li><a _href="getfilelist.do?folder=表格" href="javascript:void(0)">表格列表</a></li>
+          {% endif %}
+          {% if role==1 or role==2 %}
+          <li><a _href="getfilelist.do?folder=领导照片" href="javascript:void(0)">领导照片</a></li>
+          {% endif %}
+          {% if role==1 %}
+          <li><a _href="getfilelist.do?folder=首页新闻图片" href="javascript:void(0)">首页新闻图片</a></li>
+          {% endif %}
+        </ul>
+      </dd>
+    </dl>
+    {% endif %}
+  </div>
+</aside>
+<div class="dislpayArrow"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+  <div id="Hui-tabNav" class="Hui-tabNav">
+    <div class="Hui-tabNav-wp">
+      <ul id="min_title_list" class="acrossTab cl">
+        <li class="active"><span title="我的桌面" data-href="welcome">我的桌面</span><em></em></li>
+      </ul>
+    </div>
+    <div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
+  </div>
+  <div id="iframe_box" class="Hui-article">
+    <div class="show_iframe">
+      <div style="display:none" class="loading"></div>
+      <iframe scrolling="yes" frameborder="0" src="welcome"></iframe>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="../static/js/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/layer/1.9.3/layer.js"></script>
+<script type="text/javascript" src="../static/js/H-ui.js"></script>
+<script type="text/javascript" src="../static/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+  /*资讯-添加*/
+  function article_add(title,url){
+    var index = layer.open({
+      type: 2,
+      title: title,
+      content: url
+    });
+    layer.full(index);
+  }
+  /*图片-添加*/
+  function picture_add(title,url){
+    var index = layer.open({
+      type: 2,
+      title: title,
+      content: url
+    });
+    layer.full(index);
+  }
+  /*产品-添加*/
+  function product_add(title,url){
+    var index = layer.open({
+      type: 2,
+      title: title,
+      content: url
+    });
+    layer.full(index);
+  }
+  /*用户-添加*/
+  function member_add(title,url,w,h){
+    layer_show(title,url,w,h);
+  }
+</script>
+
+</body>
+</html>

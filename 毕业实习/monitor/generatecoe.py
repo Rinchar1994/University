@@ -1,7 +1,0 @@
-fhuibian = open('huibian.txt')
-fcoe = open('C:/study/Monitor/test.coe', 'w')
-fcoe.write('memory_initialization_radix = 16;\nmemory_initialization_vector =\n')
-for line in fhuibian:
-	fcoe.write(line)
-fcoe.close()
-fhuibian.close()
